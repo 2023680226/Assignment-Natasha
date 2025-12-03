@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TOOLBAR (menu appears here) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorTertiaryFixedDim"
+        app:title="Vehicle Loan Calculator"
+        app:titleTextColor="?attr/colorOnTertiaryContainer" />
+
+    <ScrollView
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etVehiclePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vehicle Price (RM)"
+                android:inputType="numberDecimal"
+                android:textColor="#E91E63" />
+
+            <EditText
+                android:id="@+id/etDownPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Down Payment (RM)"
+                android:inputType="numberDecimal"
+                android:textColor="#E91E63" />
+
+            <EditText
+                android:id="@+id/etLoanPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Loan Period (years)"
+                android:inputType="number"
+                android:textColor="#E91E63" />
+
+            <EditText
+                android:id="@+id/etInterestRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Interest Rate (% per year)"
+                android:inputType="numberDecimal"
+                android:textColor="#E91E63" />
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Calculate"
+                android:textColorLink="#E91E63"
+                app:rippleColor="#E91E63" />
+
+            <TextView
+                android:id="@+id/tvResults"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
